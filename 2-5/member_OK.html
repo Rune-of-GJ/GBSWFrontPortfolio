@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: "Noto Sans KR";
+    } label {
+      font-size: 13px;
+    } button {
+        font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <h2>회원가입 화면</h2>
+  <hr><br>
+  <form action="">
+    <fieldset>
+      <legend>사용자 정보</legend>
+      <ul>
+        <li><label for="user_id">아이디 </label>
+          <input type="text" id="user_id"></li>
+        <li><label for="user_email">이메일 </label>
+          <input type="email" id="user_email"></li>
+        <li><label for="user_password" >비밀번호 </label>
+          <input type="password" id="user_password" ></li>
+        <li><label for="user_password_check">비밀번호 확인 </label>
+          <input type="password" id="user_password_check"></li>
+      </ul>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>이벤트와 새로운 소식</legend>
+        <input type="radio" id="mailreceive" checked value="doreceive" name = mailr>
+        <label for="mailreceive">메일을 수신함</label>
+        <input type="radio" id="mailnoreceive" value="donotreceive" name="mailr">
+        <label for="mailnoreceive">메일을 수신하지 않음</label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>알게 된 경로 (복수 응답 가능)</legend>
+      <input type="checkbox" id="check">
+        <label for="check">인터넷 검색</label>
+        <input type="checkbox" id="check2">
+        <label for="check2">지인의 추천</label>
+        <input type="checkbox" id="check3">
+        <label for="check3">SNS 광고</label>
+        <input type="checkbox" id="check4">
+        <label for="check4">기타</label>
+    </fieldset>
+    <br>
+    <div>
+        <button type="submit">가입하기</button>
+        <button type="reset">취소</button>
+    </div>
+  </form>
+</body>
+</html>

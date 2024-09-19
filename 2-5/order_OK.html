@@ -1,0 +1,70 @@
+<!-- 박스 크기가 무슨 박스 말하시는지 모르겠어서 일단 제했습니다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: "Noto Sans KR";
+    } p {
+      font-size: 13px;
+      font-weight: bold;
+    } label {
+      font-size: 13px;
+    } #box {
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>주문 화면</h2>
+  <hr><br>
+  <form action="">
+    <fieldset>
+      <legend>주문하기</legend>
+      <p>주문할 상품을 입력해주세요.</p>
+      <hr>
+      <input type="checkbox" id="fruit">
+        <label for="fruit">과일선물세트 <input type="number" min = "0" max="5" id="box"> (최대 5개)<br></label>
+        <input type="checkbox" id="redginseng">
+        <label for="redginseng">홍삼선물세트 <input type="number" min = "0" max="10"  step="2"  id="box"> (2개 1세트, 최대 10개)<br></label>
+      <hr>
+      <p>포장을 선택해주세요.</p>
+      <input type="radio" id="ribbon" checked value="doribbon" name = "ribbons">
+        <label for="ribbon">리본 포장</label>
+        <input type="radio" id="noribbon" value="donotuseribbon" name="ribbons">
+        <label for="noribbon">리본 포장하지 않음</label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>배송 정보</legend>
+      <ul>
+        <li><label for="username">이름 </label>
+          <input type="text" id="username" placeholder="공백 없이 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='공백 없이 입력하세요'"></li>
+        <li><label for="tel">연락처 </label>
+          <input type="tel" id="tel" placeholder="-를 빼고 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='-를 빼고 입력하세요'"></li>
+        <li><label for="emails" >이메일 </label>
+          <input type="text" id="emails" style="width: 70px;"> @
+          <select id="local">
+            <option value="gb" selected>gbsw.com</option>
+            <option value="gj">gyeongju.com</option>
+            <option value="nv">naver.com</option>
+          </select></li>
+        <li><label for="box_design">박스 디자인 이미지 </label>
+          <input type="file" id="box_design"></li>
+        <li><label for="deli_day">희망 배송일 </label>
+          <input type="date" id="deli_day" min="2024-09-01" max="2024-09-10"></li>
+        <li><label for="message">배송 메시지 </label>
+          <textarea id="message" rows="3" cols="40" maxlength="50"></textarea></li>
+
+
+      </ul>
+    </fieldset>
+    <br>
+    <button type="submit">제출하기</button>
+    <button type="reset">다시 작성</button>
+  </form>
+</body>
+</html> 
